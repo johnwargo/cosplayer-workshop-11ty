@@ -26,10 +26,8 @@ module.exports = eleventyConfig => {
 	});
 
 	eleventyConfig.addFilter("filterByCategory", function (posts, cat) {
-		/*
-		case matters, so let's lowercase the desired category, cat
-		and we will lowercase our posts categories
-		*/
+		// case matters, so let's lowercase the desired category, cat	and we will 
+		// lowercase our posts categories as well
 		cat = cat.toLowerCase();
 		let result = posts.filter(p => {
 			let cats = p.data.categories.map(s => s.toLowerCase());

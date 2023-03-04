@@ -9,6 +9,8 @@ eleventyComputed:
   title: "Category: {{ category }}" 
 ---
 
+This is some content for the categories page.
+<br/><br/>
 {% assign posts = collections.post | filterByCategory: category %}
 {% for post in posts reversed %}
   <p>
