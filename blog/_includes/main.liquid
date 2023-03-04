@@ -1,5 +1,5 @@
 ---
-title: The Cosplayer's Workshop
+siteTitle: The Cosplayer's Workshop
 ---
 
 <!doctype html>
@@ -20,12 +20,13 @@ title: The Cosplayer's Workshop
       }
     </style>
 
-    <title>{{ title }}</title>
+    <title>{{ siteTitle }}</title>
   </head>
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
       <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">{{ siteTitle }}</span>
         <button
           class="navbar-toggler"
           type="button"
@@ -42,17 +43,18 @@ title: The Cosplayer's Workshop
               <a {% if page.url == "/" %}class="nav-link active"aria-current="page"{% else %}class="nav-link"{% endif %} href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a {% if page.url == "/about/" %}class="nav-link active"aria-current="page"{% else %}class="nav-link"{% endif %}href="/about">About</a>
+              <a {% if page.url == "/categories/" %}class="nav-link active"aria-current="page"{% else %}class="nav-link"{% endif %}href="/categories">Categories</a>
             </li>
             <li class="nav-item">
               <a {% if page.url == "/archive/" %}class="nav-link active"aria-current="page"{% else %}class="nav-link"{% endif %}href="/archive">Archives</a>
+            </li>
+            <li class="nav-item">
+              <a {% if page.url == "/about/" %}class="nav-link active"aria-current="page"{% else %}class="nav-link"{% endif %}href="/about">About</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
-    <h1>{{ title }}</h1>
 
     {{ content }}
 
