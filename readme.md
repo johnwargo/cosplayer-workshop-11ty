@@ -1,6 +1,6 @@
 # Cosplayer Workshop
 
-My first [eleventy](https://www.11ty.dev/) site. I'm building this using [Raymond Camden](https://www.raymondcamden.com/)'s [A Guide to Building a Blog in Eleventy](https://www.raymondcamden.com/2022/01/19/a-guide-to-building-a-blog-in-eleventy)
+My first [eleventy](https://www.11ty.dev/) site. I'm building this using [Raymond Camden](https://www.raymondcamden.com/)'s [A Guide to Building a Blog in Eleventy](https://cfjedimaster.github.io/eleventy-blog-guide/guide.html)
 
 My daughter uses my workshop to build her costumes and props, and there are a lot of interesting tools there that make her work easier. I'm starting this site to:
 

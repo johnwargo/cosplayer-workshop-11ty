@@ -8,5 +8,8 @@
   },
   "keywords": [],
   "author": "John M. Wargo",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  }
 }
