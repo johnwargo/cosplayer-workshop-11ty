@@ -1,0 +1,12 @@
+{
+  "name": "cosplayerworkshop",
+  "version": "1.0.0",
+  "description": "My first [eleventy](https://www.11ty.dev/) site. I'm building this using [Raymond Camden](https://www.raymondcamden.com/)'s [A Guide to Building a Blog in Eleventy](https://www.raymondcamden.com/2022/01/19/a-guide-to-building-a-blog-in-eleventy)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
