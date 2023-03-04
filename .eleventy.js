@@ -25,6 +25,16 @@ module.exports = eleventyConfig => {
 		return Array.from(categories);
 	});
 
+	// eleventyConfig.addCollection("categoryList", function (collectionApi) {
+	// 	let catList = new Set();
+	// 	let posts = collectionApi.getFilteredByTag('post');
+	// 	posts.forEach(p => {
+	// 		let cats = p.data.categories;
+	// 		cats.forEach(c => catList.add(c));
+	// 	});
+	// 	return Array.from(catList);
+	// });
+
 	eleventyConfig.addFilter("filterByCategory", function (posts, cat) {
 		// case matters, so let's lowercase the desired category, cat	and we will 
 		// lowercase our posts categories as well
@@ -41,7 +51,13 @@ module.exports = eleventyConfig => {
 		return english.format(d);
 	});
 
+	function currentYear() {
+    const today = new Date();
+    return today.getFullYear();
+  }
+
 	eleventyConfig.addPassthroughCopy("blog/images/*");
+	eleventyConfig.addPassthroughCopy("blog/css/*");
 
 	return {
 		dir: {

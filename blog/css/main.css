@@ -1,0 +1,10 @@
+body {
+  margin: 50px;
+}
+
+.footer {  
+  position: fixed;
+  left: 20px;
+  bottom: 0;
+  width: 100%;  
+}

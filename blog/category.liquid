@@ -1,15 +1,17 @@
 ---
+layout: main
 pagination:
   data: collections.categories
   size: 1
   alias: category
 permalink: "/category/{{ category | slugify }}/index.html"
-layout: main
 eleventyComputed:
   title: "Category: {{ category }}" 
 ---
 
-<p>This is some content for the categories page.</p>
+<p>This page contains links to all Posts assigned the
+  <strong>{{ category | capitalize }}</strong>
+  category in reverse chronological order.</p>
 
 {% assign posts = collections.post | filterByCategory: category %}
 {% for post in posts reversed %}
