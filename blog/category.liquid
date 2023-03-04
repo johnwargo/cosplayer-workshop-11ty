@@ -3,7 +3,7 @@ pagination:
   data: collections.categories
   size: 1
   alias: category
-permalink: "/categories/{{ category | slugify }}/index.html"
+permalink: "/category/{{ category | slugify }}/index.html"
 layout: main
 eleventyComputed:
   title: "Category: {{ category }}" 
