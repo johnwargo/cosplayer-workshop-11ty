@@ -1,9 +1,12 @@
 ---
 pagination:
-  data: collections.categories
+data: collections.categories
   size: 1
   alias: category
 permalink: "/categories/{{ category | slugify }}/index.html"
+layout: main
+eleventyComputed:
+  title: "Category: {{ category }}" 
 ---
 
 <h2>Category: {{ category }}</h2>

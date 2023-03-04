@@ -25,7 +25,7 @@ module.exports = eleventyConfig => {
 		return Array.from(categories);
 	});
 
-	eleventyConfig.addFilter("filterByCategory", function(posts, cat) {
+	eleventyConfig.addFilter("filterByCategory", function (posts, cat) {
 		/*
 		case matters, so let's lowercase the desired category, cat
 		and we will lowercase our posts categories
@@ -36,6 +36,11 @@ module.exports = eleventyConfig => {
 			return cats.includes(cat);
 		});
 		return result;
+	});
+
+	const english = new Intl.DateTimeFormat("en");
+	eleventyConfig.addFilter("niceDate", function (d) {
+		return english.format(d);
 	});
 
 	return {
