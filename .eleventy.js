@@ -1,11 +1,13 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = eleventyConfig => {
 
+	eleventyConfig.addPlugin(eleventyNavigationPlugin);
 	eleventyConfig.addPlugin(pluginRss);
 
+	// From ray camden's blog, first paragraph as excerpt
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
-
 	function extractExcerpt(post) {
 		if (!post.templateContent) return '';
 		if (post.templateContent.indexOf('</p>') > 0) {
@@ -25,20 +27,11 @@ module.exports = eleventyConfig => {
 		return Array.from(categories);
 	});
 
-	// eleventyConfig.addCollection("categoryList", function (collectionApi) {
-	// 	let catList = new Set();
-	// 	let posts = collectionApi.getFilteredByTag('post');
-	// 	posts.forEach(p => {
-	// 		let cats = p.data.categories;
-	// 		cats.forEach(c => catList.add(c));
-	// 	});
-	// 	return Array.from(catList);
-	// });
-
 	eleventyConfig.addFilter("filterByCategory", function (posts, cat) {
 		// case matters, so let's lowercase the desired category, cat	and we will 
 		// lowercase our posts categories as well
-		cat = cat.toLowerCase();
+		// cat = cat.toLowerCase();
+		// removed this since I didn't want lowercase categories
 		let result = posts.filter(p => {
 			let cats = p.data.categories.map(s => s.toLowerCase());
 			return cats.includes(cat);
@@ -62,7 +55,7 @@ module.exports = eleventyConfig => {
 	return {
 		dir: {
 			input: 'blog',
-			output: 'public'
+			output: "public",
 		}
 	}
 

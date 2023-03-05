@@ -6,7 +6,13 @@ pagination:
   reverse: true
 title: Archive
 layout: main
+eleventyNavigation:
+  key: Archive  
+  order: 3
 ---
+
+<h1>Post Archive</h1>
+<p class="lead">This page contains all posts in reverse chronological order.</p>
 
 {% for post in posts %}
   <p>

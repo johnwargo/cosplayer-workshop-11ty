@@ -5,9 +5,12 @@ pagination:
   alias: categories
 title: Categories
 layout: main
+eleventyNavigation:
+  key: Categories
+  order: 2
 ---
-
-<p>This is some content for the categories page.</p>
+<h1>Post Categories</h1>
+<p class="lead">This is some content for the categories page.</p>
 
 {% assign categories = collections.categories | sort %}
 <ul>
