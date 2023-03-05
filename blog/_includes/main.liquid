@@ -36,11 +36,11 @@ navOptions:
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            {%- for entry in navPages %}
+            {% for entry in navPages %}
               <li class="nav-item">
                 <a {% if entry.url == page.url %}class="nav-link active"aria-current="page"{% else %}class="nav-link"{% endif %} href="{{ entry.url }}">{{ entry.title }}</a>
               </li>
-            {%- endfor %}
+            {% endfor %}
           </ul>
         </div>
       </div>
