@@ -9,7 +9,6 @@ navOptions:
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ siteTitle }}</title>
@@ -24,7 +23,7 @@ navOptions:
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">{{ siteTitle }}</a>
+        <a class="navbar-brand" href="/">{{ siteTitle }}</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -52,7 +51,7 @@ navOptions:
 
     <footer role="contentinfo" class="footer">
       <hr/>
-      <p>Copyright {{ "now" | date: "%Y" }},
+      <p class="footer-text">Copyright {{ "now" | date: "%Y" }},
         <a href="https://johnwargo.com" target="_blank">John M. Wargo</a>
       </p>
     </footer>

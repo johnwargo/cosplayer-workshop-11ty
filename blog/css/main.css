@@ -2,9 +2,13 @@ body {
   margin: 50px;
 }
 
-.footer {  
+.footer {
   position: fixed;
-  left: 20px;
+  left: 0px;
   bottom: 0;
-  width: 100%;  
+  width: 100%;
+}
+
+.footer-text {
+ margin-left: 15px;
 }
