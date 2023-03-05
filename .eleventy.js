@@ -61,7 +61,8 @@ module.exports = eleventyConfig => {
 
 	return {
 		dir: {
-			input: 'blog'
+			input: 'blog',
+			output: 'public'
 		}
 	}
 
