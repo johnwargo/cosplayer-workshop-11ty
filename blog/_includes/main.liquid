@@ -4,8 +4,6 @@ navOptions:
   includeSelf: true
 ---
 
-{% assign navPages = collections.all | eleventyNavigation %}
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -52,6 +50,7 @@ navOptions:
           </ul>
         </div>
       </div>
+      <br/>
     </nav>
 
     {{ collections.all | eleventyNavigation | eleventyNavigationToHtml }}
