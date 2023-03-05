@@ -4,6 +4,8 @@ navOptions:
   includeSelf: true
 ---
 
+{% assign navPages = collections.all | eleventyNavigation %}
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -35,25 +37,16 @@ navOptions:
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a {% if page.url == "/" %}class="nav-link active"aria-current="page"{% else %}class="nav-link"{% endif %} href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a {% if page.url == "/categories/" %}class="nav-link active"aria-current="page"{% else %}class="nav-link"{% endif %}href="/categories">Categories</a>
-            </li>
-            <li class="nav-item">
-              <a {% if page.url == "/archive/" %}class="nav-link active"aria-current="page"{% else %}class="nav-link"{% endif %}href="/archive">Archives</a>
-            </li>
-            <li class="nav-item">
-              <a {% if page.url == "/about/" %}class="nav-link active"aria-current="page"{% else %}class="nav-link"{% endif %}href="/about">About</a>
-            </li>
+            {%- for entry in navPages %}
+              <li class="nav-item">
+                <a {% if entry.url == page.url %}class="nav-link active"aria-current="page"{% else %}class="nav-link"{% endif %} href="{{ entry.url }}">{{ entry.title }}</a>
+              </li>
+            {%- endfor %}
           </ul>
         </div>
       </div>
       <br/>
     </nav>
-
-    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml }}
 
     {{ content }}
 
