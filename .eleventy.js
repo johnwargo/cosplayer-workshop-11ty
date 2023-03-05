@@ -1,9 +1,10 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = eleventyConfig => {
 
 	eleventyConfig.addPlugin(pluginRss);
-
+	eleventyConfig.addPlugin(eleventyNavigationPlugin);
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
 
 	function extractExcerpt(post) {

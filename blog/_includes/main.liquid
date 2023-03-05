@@ -1,6 +1,10 @@
 ---
 siteTitle: The Cosplayer's Workshop
+navOptions:
+  includeSelf: true
 ---
+
+{% assign navPages = collections.all %}
 
 <!doctype html>
 <html lang="en">
@@ -49,6 +53,8 @@ siteTitle: The Cosplayer's Workshop
         </div>
       </div>
     </nav>
+
+    {{ collections.all | eleventyNavigation | eleventyNavigationToHtml }}
 
     {{ content }}
 
