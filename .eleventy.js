@@ -49,12 +49,15 @@ module.exports = eleventyConfig => {
     return today.getFullYear();
   }
 
-	eleventyConfig.addPassthroughCopy("blog/images/*");
-	eleventyConfig.addPassthroughCopy("blog/css/*");
+	eleventyConfig.addPassthroughCopy("src/assets/css/*");	
+	eleventyConfig.addPassthroughCopy("src/assets/js/*");
+	eleventyConfig.addPassthroughCopy("src/assets/sass/*");
+	eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
+	eleventyConfig.addPassthroughCopy("src/images/*");	
 
 	return {
 		dir: {
-			input: 'blog',
+			input: 'src',
 			output: "public",
 		}
 	}
