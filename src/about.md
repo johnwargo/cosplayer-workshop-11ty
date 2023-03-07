@@ -1,9 +1,6 @@
 ---
 title: About
-layout: main
-eleventyNavigation:
-  key: About  
-  order: 4
+layout: home
 ---
 
 <h1>About This Site</h1>

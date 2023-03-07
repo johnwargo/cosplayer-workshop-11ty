@@ -6,10 +6,26 @@ pagination:
   size: 10
   alias: posts
   reverse: true
-eleventyNavigation:
-  key: Home
-  order: 1
 ---
+
+<!-- Banner -->
+<section id="banner">
+  <div class="content">
+    <header>
+      <h1>Welcome to Our Workshop</h1>
+      <p>Enabling my daughter's Cosplay through access to better tools</p>
+    </header>
+    <p>I don't Cosplay, but my daughter does and I let her use my workshop to work on her projects. I started with my father's tools, but over the decades I added more and more tools to help me with my woodworking and electronics projects. I now share my workshop with my daughter, and the posts here highlight the tools and equipment I provide her to use with her projects.</p>
+    <ul class="actions">
+      <li>
+        <a href="/about" class="button big">Learn More</a>
+      </li>
+    </ul>
+  </div>
+  <span class="image object">
+    <img src="images/workshop01.jpg" alt="" />
+  </span>
+</section>
 
 {% for post in posts reversed %}
   <p>
