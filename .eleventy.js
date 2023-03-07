@@ -30,8 +30,7 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addFilter("filterByCategory", function (posts, cat) {
 		// case matters, so let's lowercase the desired category, cat	and we will 
 		// lowercase our posts categories as well
-		// cat = cat.toLowerCase();
-		// removed this since I didn't want lowercase categories
+		cat = cat.toLowerCase();
 		let result = posts.filter(p => {
 			let cats = p.data.categories.map(s => s.toLowerCase());
 			return cats.includes(cat);
@@ -53,7 +52,9 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPassthroughCopy("src/assets/js/*");
 	eleventyConfig.addPassthroughCopy("src/assets/sass/*");
 	eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
+
 	eleventyConfig.addPassthroughCopy("src/images/*");	
+	eleventyConfig.addPassthroughCopy("src/images/2023/*.jpg");	
 
 	return {
 		dir: {

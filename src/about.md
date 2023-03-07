@@ -5,12 +5,13 @@ layout: home
 
 <section id="banner">
   <div class="content">
+  <span class="image object">
+      <img src="/images/workshop01.jpg" alt="" />
+    </span>    
     <header>
       <h1>About This Site</h1>      
     </header>
-    <span class="image object">
-      <img src="/images/workshop01.jpg" alt="" />
-    </span>    
+    
   </div>
 </section>
 
