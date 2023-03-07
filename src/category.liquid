@@ -9,16 +9,22 @@ eleventyComputed:
   title: "Category: {{ category }}"
 ---
 
-<p>This page contains links to all Posts assigned the
-  <strong>{{ category | capitalize }}</strong>
-  category in reverse chronological order.</p>
+<section id="banner">
+  <div class="content">
+    <header>
+      <h1>{{ title }}</h1>
+      <p>All of the posts for a single category, in reverse chronological order.</p>
+    </header>
 
-{% assign posts = collections.post | filterByCategory: category %}
-{% for post in posts reversed %}
-  <div>
-    <p>
-      <a href="{{post.url}}">{{ post.data.title }}</a>, posted {{ post.date | niceDate }}
-    </p>
-    {% excerpt post %}
+    {% assign posts = collections.post | filterByCategory: category %}
+    {% for post in posts reversed %}
+      <div>
+        <p>
+          <a href="{{post.url}}">{{ post.data.title }}</a>, posted {{ post.date | niceDate }}
+        </p>
+        {% excerpt post %}
+      </div>
+    {% endfor %}
+
   </div>
-{% endfor %}
+</section>

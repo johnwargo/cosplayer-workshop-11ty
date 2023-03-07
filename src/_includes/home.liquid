@@ -2,6 +2,8 @@
 siteTitle: The Cosplayer's Workshop
 ---
 
+{% assign categories = collections.categories | sort %}
+
 <!DOCTYPE HTML>
 <!--
 Editorial by Pixelarity
@@ -22,33 +24,6 @@ License: pixelarity.com/license
         <div class="inner">
           <header id="header">
             <a href="/index.html" class="logo">The Cosplayer's Workshop</a>
-            <ul class="icons">
-              <li>
-                <a href="#" class="icon brands fa-twitter">
-                  <span class="label">Twitter</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="icon brands fa-facebook-f">
-                  <span class="label">Facebook</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="icon brands fa-snapchat-ghost">
-                  <span class="label">Snapchat</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="icon brands fa-instagram">
-                  <span class="label">Instagram</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" class="icon brands fa-medium-m">
-                  <span class="label">Medium</span>
-                </a>
-              </li>
-            </ul>
           </header>
 
           {{ content }}
@@ -56,11 +31,8 @@ License: pixelarity.com/license
         </div>
       </div>
 
-      <!-- Sidebar -->
       <div id="sidebar">
         <div class="inner">
-
-          <!-- Search -->
           <section id="search" class="alt">
             <form method="post" action="#">
               <input
@@ -71,9 +43,6 @@ License: pixelarity.com/license
             </form>
           </section>
 
-          {% assign categories = collections.categories | sort %}
-
-          <!-- Menu -->
           <nav id="menu">
             <header class="major">
               <h2>Menu</h2>
@@ -102,21 +71,17 @@ License: pixelarity.com/license
             <header class="major">
               <h2>Get in touch</h2>
             </header>
-            <p>Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac varius enim lorem
-              ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.
-            </p>
             <ul class="contact">
               <li class="icon solid fa-envelope">
-                <a href="#">information@untitled.tld</a>
+                <a href="#">john@johnwargo.com</a>
               </li>
-              <li class="icon solid fa-phone">(000) 000-0000</li>
-              <li class="icon solid fa-home">1234 Somewhere Road #8254<br/>
-                Nashville, TN 00000-0000</li>
+              <li class="icon solid fa-home">Charlotte, NC</li>
             </ul>
           </section>
 
           <footer id="footer">
-            <p class="copyright">&copy; John M. Wargo, All Rights Reserved</p>
+            <p class="copyright">&copy;
+              <a href="https://johnwargo.com" target="_blank">John M. Wargo</a>, All Rights Reserved</p>
           </footer>
         </div>
       </div>
