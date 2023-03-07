@@ -5,6 +5,14 @@ categories: [None]
 tags: post
 ---
 
-Bacon landjaeger corned beef, chicken spare ribs leberkas ground round frankfurter kielbasa chislic jerky. Ham buffalo ham hock pork tongue. Tenderloin spare ribs tongue sirloin, chuck pork chop capicola rump tri-tip pork fatback brisket buffalo ground round. Chuck burgdoggen alcatra sausage shoulder, tri-tip andouille. Venison shank spare ribs turkey short ribs.
+This is my daughter Lizzy and me, from way back in 2005. She liked me more back then because I didn’t hound her to do the dishes or pick up her clothes. Aaah, those were different days back then. 
 
-![Lizzy and Me](/images/leaves.jpg)
+![Me and Lizzy in the Leaves](/posts/2023/images/leaves.jpg)
+
+This is Lizzy now; she’s an accomplished Cosplayer and goes by Lizzy Space Wizard (or just Space Wizard, I can never remember). See what I mean?
+
+![Mando 1](/posts/2023/images/mando-1.jpg) 
+
+![Mando 2](/posts/2023/images/mando-2.jpg)
+
+I share a workshop with her now; I use the shop for woodworking and electronics projects and she uses it for her Cosplay costumes and props. 

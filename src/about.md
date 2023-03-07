@@ -6,7 +6,7 @@ layout: home
 <section id="banner">
   <div class="content">
     <header>
-      <h1>About the Workshop</h1>      
+      <h1>About This Site</h1>      
     </header>
     <span class="image object">
       <img src="/images/workshop01.jpg" alt="" />
@@ -32,7 +32,7 @@ With the mess in my daughter's bedroom, I knew I had to move her to my workshop.
 
 ![Under-bench Storage](/images/under-bench.jpg)
 
-I had an assembly table in my shop, basically the same piece of plywood you see in the image on the top of the home page. I’m in the process of rebuilding it, but that’s another story. 
+I had an assembly table in my shop, basically the same piece of plywood you see in the image on the top of the page laid across two saw horses. I’m in the process of rebuilding it, but that’s another story. 
 
 To get her off of my assembly table, I built a 32” by 32” work table for her using some Shop Stand components from Rockler. She quickly filled that up and now she’s back on my main assembly table.
 
