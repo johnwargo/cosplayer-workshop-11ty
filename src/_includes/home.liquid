@@ -15,7 +15,7 @@ License: pixelarity.com/license
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>{{ siteTitle }}</title>
-    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="{{ "/assets/" | htmlBaseUrl }}css/main.css" />
   </head>
 
   <body class="is-preload">
@@ -23,7 +23,7 @@ License: pixelarity.com/license
       <div id="main">
         <div class="inner">
           <header id="header">
-            <a href="/index.html" class="logo">The Cosplayer's Workshop</a>
+            <a href="{{ "/" | htmlBaseUrl }}index.html" class="logo">The Cosplayer's Workshop</a>
           </header>
 
           {{ content }}
@@ -87,11 +87,11 @@ License: pixelarity.com/license
       </div>
     </div>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{{ "/assets/" | htmlBaseUrl }}js/jquery.min.js"></script>
+    <script src="{{ "/assets/" | htmlBaseUrl }}js/browser.min.js"></script>
+    <script src="{{ "/assets/" | htmlBaseUrl }}js/breakpoints.min.js"></script>
+    <script src="{{ "/assets/" | htmlBaseUrl }}js/util.js"></script>
+    <script src="{{ "/assets/" | htmlBaseUrl }}js/main.js"></script>
 
   </body>
 
