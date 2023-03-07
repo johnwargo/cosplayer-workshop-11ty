@@ -51,18 +51,16 @@ License: pixelarity.com/license
               <li>
                 <a href="{{ "/" | htmlBaseUrl }}">Home</a>
               </li>
-              {% if categories.size > -1 %}
-                <li>
-                  <span class="opener">Categories</span>
-                  <ul>
-                    {% for category in categories %}
-                      <li>
-                        <a href="{{ "/" | htmlBaseUrl }}category/{{ category | slugify }}">{{ category | capitalize }}</a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                </li>
-              {% endif %}
+              <li>
+                <span class="opener">Categories</span>
+                <ul>
+                  {% for category in categories %}
+                    <li>
+                      <a href="{{ "/" | htmlBaseUrl }}category/{{ category | slugify }}">{{ category | capitalize }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </li>
               <li>
                 <a href="{{ "/" | htmlBaseUrl }}about">About This Site</a>
               </li>
