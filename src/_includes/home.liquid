@@ -15,7 +15,7 @@ License: pixelarity.com/license
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <title>{{ siteTitle }}</title>
-    <link rel="stylesheet" href="{{ "/assets/" | htmlBaseUrl }}css/main.css" />
+    <link rel="stylesheet" href="{{ "/" | htmlBaseUrl }}assets/css/main.css" />
   </head>
 
   <body class="is-preload">
@@ -56,13 +56,13 @@ License: pixelarity.com/license
                 <ul>
                   {% for category in categories %}
                     <li>
-                      <a href="/category/{{ category | slugify }}">{{ category | capitalize }}</a>
+                      <a href="{{ "/" | htmlBaseUrl }}category/{{ category | slugify }}">{{ category | capitalize }}</a>
                     </li>
                   {% endfor %}
                 </ul>
               </li>
               <li>
-                <a href="about">About This Site</a>
+                <a href="{{ "/" | htmlBaseUrl }}about">About This Site</a>
               </li>
             </ul>
           </nav>
@@ -87,11 +87,11 @@ License: pixelarity.com/license
       </div>
     </div>
 
-    <script src="{{ "/assets/" | htmlBaseUrl }}js/jquery.min.js"></script>
-    <script src="{{ "/assets/" | htmlBaseUrl }}js/browser.min.js"></script>
-    <script src="{{ "/assets/" | htmlBaseUrl }}js/breakpoints.min.js"></script>
-    <script src="{{ "/assets/" | htmlBaseUrl }}js/util.js"></script>
-    <script src="{{ "/assets/" | htmlBaseUrl }}js/main.js"></script>
+    <script src="{{ "/" | htmlBaseUrl }}assets/js/jquery.min.js"></script>
+    <script src="{{ "/" | htmlBaseUrl }}assets/js/browser.min.js"></script>
+    <script src="{{ "/" | htmlBaseUrl }}assets/js/breakpoints.min.js"></script>
+    <script src="{{ "/" | htmlBaseUrl }}assets/js/util.js"></script>
+    <script src="{{ "/" | htmlBaseUrl }}assets/js/main.js"></script>
 
   </body>
 
