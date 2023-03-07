@@ -10,8 +10,7 @@ layout: home
     </span>    
     <header>
       <h1>About This Site</h1>      
-    </header>
-    
+    </header>    
   </div>
 </section>
 
