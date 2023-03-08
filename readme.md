@@ -9,6 +9,12 @@ My daughter uses my workshop to build her costumes and props, and there are a lo
 1. Learn Eleventy
 2. Document some of the cool tools I have that Cosplayers (people who Cosplay) can use to simplify their work
 
+## Tasks
+
+* [ ] Add buy me a Coffee
+* [ ] Add Google Analytics
+* [ ] Add Search
+
 This site is a work in progress, but should be fun putting together.
 
 ![Home Page](images/image-01.png)
