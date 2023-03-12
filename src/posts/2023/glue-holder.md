@@ -9,7 +9,7 @@ I was in my shop today and noticed that Lizzy left her wood glue bottle open. I 
 
 As I mentioned in the [About](/about) page, I recently built an assembly table using the [Rockler Rock Steady Shop Stand Components](https://www.rockler.com/build-your-own-rockler-rock-steady-shop-stand-components). Lizzy and I both use Wood Glue in our projects,and both of us are pretty impatient when it comes to getting glue out of the bottle. To help with this, I picked up the [Rockler Glue Bottle Dock](https://www.rockler.com/rockler-glue-bottle-dock) and attached it to one of the legs of my assembly table as shown in the following figure
 
-![Rockler Glue Bottle Dock](images/2023/rockler-glue-bottle-dock.jpg)
+![Rockler Glue Bottle Dock](/images/2023/rockler-glue-bottle-dock.jpg)
 
 Hopefully this will help her keep her glue bottles closed.
 
