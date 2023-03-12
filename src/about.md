@@ -1,6 +1,6 @@
 ---
 title: About
-layout: home
+layout: default
 ---
 
 <section id="banner">
