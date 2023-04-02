@@ -1,6 +1,13 @@
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
+// Transforms
+// https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
+const htmlMinTransform = require('./src/transforms/html-min.js');
+
+// Create a helpful production flag
+const isProduction = process.env.node_env === 'production';
+
 module.exports = eleventyConfig => {
 
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
@@ -44,17 +51,22 @@ module.exports = eleventyConfig => {
 	});
 
 	function currentYear() {
-    const today = new Date();
-    return today.getFullYear();
-  }
+		const today = new Date();
+		return today.getFullYear();
+	}
 
-	eleventyConfig.addPassthroughCopy("src/assets/css/*");	
+	eleventyConfig.addPassthroughCopy("src/assets/css/*");
 	eleventyConfig.addPassthroughCopy("src/assets/js/*");
 	eleventyConfig.addPassthroughCopy("src/assets/sass/*");
 	eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
 
-	eleventyConfig.addPassthroughCopy("src/images/*");	
-	eleventyConfig.addPassthroughCopy("src/images/2023/*.jpg");	
+	eleventyConfig.addPassthroughCopy("src/images/*");
+	eleventyConfig.addPassthroughCopy("src/images/2023/*.jpg");
+
+	// Only minify HTML if we are in production because it slows builds
+	if (isProduction) {
+		eleventyConfig.addTransform('htmlmin', htmlMinTransform);
+	}
 
 	return {
 		dir: {
