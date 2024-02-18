@@ -20,11 +20,10 @@ eleventyComputed:
     {% for post in posts reversed %}
       <div>
         <p>
-          <a href="{{post.url}}">{{ post.data.title }}</a>, posted {{ post.date | niceDate }}
+          <a href="{{post.url}}">{{ post.data.title }}</a>, posted {{ post.date | readableDate }}
         </p>
         {% excerpt post %}
       </div>
     {% endfor %}
-
   </div>
 </section>

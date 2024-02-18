@@ -5,7 +5,7 @@ layout: default
 <p>
   <strong>Posted:
   </strong>
-  {{ date | niceDate }} |
+  {{ date | readableDate }} |
   <strong>Categories:</strong>
   {% for cat in categories %}
     <a href="/category/{{ cat | slugify }}">{{ cat }}</a>

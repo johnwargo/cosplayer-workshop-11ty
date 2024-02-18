@@ -60,11 +60,6 @@ module.exports = eleventyConfig => {
 		return result;
 	});
 
-	const english = new Intl.DateTimeFormat("en");
-	eleventyConfig.addFilter("niceDate", function (d) {
-		return english.format(d);
-	});
-
 	function currentYear() {
 		const today = new Date();
 		return today.getFullYear();
