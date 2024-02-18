@@ -72,6 +72,17 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
 	eleventyConfig.addPassthroughCopy("src/images/*");
 
+	[
+		"src/_data/*",
+		"src/assets/css/",
+		"src/assets/js/",
+		"src/assets/sass/",
+		"src/assets/webfonts/",
+		"src/files/*",
+		"src/images/*"
+	].forEach((path) => {
+		eleventyConfig.addPassthroughCopy(path);
+	});
 	// Assumes cascading folders per year
 	let thisYear = new Date().getFullYear();
 	for (let i = 2023; i <= thisYear; i++) {
