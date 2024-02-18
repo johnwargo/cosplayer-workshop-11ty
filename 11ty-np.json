@@ -1,0 +1,11 @@
+{
+  "editorCmd": "code",
+  "openAfterCreate": false,
+  "paragraphCount": 4,
+  "postsFolder": "src/posts",
+  "promptCategory": true,
+  "promptTargetFolder": false,
+  "promptTemplateFile": false,
+  "templateFile": "11ty-np.md",
+  "useYear": true
+}

@@ -11,7 +11,7 @@ My daughter uses my workshop to build her costumes and props, and there are a lo
 
 ## Tasks
 
-* [ ] Add categories page
+* [ ] Finish implementation of Categories plugin
 * [ ] Add buy me a Coffee
 * [ ] Add Google Analytics
 * [ ] Add Search

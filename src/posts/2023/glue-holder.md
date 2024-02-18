@@ -1,7 +1,8 @@
 ---
 title: Glue Holder
 date: 2023-03-12
-categories: [Miscellaneous]
+categories: 
+  - Miscellaneous
 tags: post
 ---
 

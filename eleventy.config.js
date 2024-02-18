@@ -1,6 +1,9 @@
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const pluginDate = require('eleventy-plugin-date');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-
+// https://github.com/11ty/eleventy/issues/2301
+const markdownIt = require('markdown-it');
+const markdownItAttrs = require('markdown-it-attrs');
 // Transforms
 // https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
 const htmlMinTransform = require('./src/transforms/html-min.js');
@@ -9,9 +12,21 @@ const htmlMinTransform = require('./src/transforms/html-min.js');
 const isProduction = process.env.node_env === 'production';
 
 module.exports = eleventyConfig => {
-
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+	eleventyConfig.addPlugin(pluginDate);
 	eleventyConfig.addPlugin(pluginRss);
+
+	// https://github.com/11ty/eleventy/issues/2301
+	const mdOptions = {
+		html: true,
+		breaks: true,
+		linkify: true,
+	};
+	const markdownLib = markdownIt(mdOptions)
+		.use(markdownItAttrs)
+		.disable("code");
+
+	eleventyConfig.setLibrary("md", markdownLib);
 
 	// From ray camden's blog, first paragraph as excerpt
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));
@@ -55,13 +70,18 @@ module.exports = eleventyConfig => {
 		return today.getFullYear();
 	}
 
+	eleventyConfig.addPassthroughCopy("src/_data/*");
 	eleventyConfig.addPassthroughCopy("src/assets/css/*");
 	eleventyConfig.addPassthroughCopy("src/assets/js/*");
 	eleventyConfig.addPassthroughCopy("src/assets/sass/*");
 	eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
-
 	eleventyConfig.addPassthroughCopy("src/images/*");
-	eleventyConfig.addPassthroughCopy("src/images/2023/*.jpg");
+
+	// Assumes cascading folders per year
+	let thisYear = new Date().getFullYear();
+	for (let i = 2023; i <= thisYear; i++) {
+		eleventyConfig.addPassthroughCopy(`src/images/${i}/*`);
+	}
 
 	// Only minify HTML if we are in production because it slows builds
 	if (isProduction) {
@@ -72,7 +92,9 @@ module.exports = eleventyConfig => {
 		dir: {
 			input: 'src',
 			output: "_site",
+			includes: "_includes",
+			layouts: "_layouts",
+			data: "_data"
 		}
 	}
-
 };

@@ -1,7 +1,8 @@
 ---
 title: Lizzy in the Shop
 date: 2023-03-04
-categories: [Uncategorized]
+categories: 
+  - Miscellaneous
 tags: post
 ---
 

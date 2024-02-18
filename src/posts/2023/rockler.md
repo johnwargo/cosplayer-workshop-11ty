@@ -1,7 +1,9 @@
 ---
 title: Rockler Stuff
 date: 2023-03-11
-categories: [Rockler]
+categories: 
+  - Rockler
+  - Tools
 tags: post
 ---
 
