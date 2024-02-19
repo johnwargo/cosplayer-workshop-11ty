@@ -13,27 +13,16 @@ layout: default
       categories.length }} categories on the site today.</p>
 
     {% if categories.length > 0 %}
-    <p>
-      <a href="{{ " /" | htmlBaseUrl }}categories/{{ catData.category | slugify }}">{{ catData.category }}</a>
-      ({{ catData.count }} posts)
-      {% if catData.description %}
-      <br />
-      {{ catData.description }}
-      {% endif %}
-    </p>
-
-    {% comment %} <table>
-      {% tablerow catData in categories cols:2 %}
-      <h4>
-        <a href="{{ " /" | htmlBaseUrl }}categories/{{ catData.category | slugify }}/">{{ catData.category }}</a>
-      </h4>
-      Count: {{ catData.count }}
-      {% if catData.description.length > 0 %}
-      |
-      {{ catData.description }}
-      {% endif %}
-      {% endtablerow %}
-    </table> {% endcomment %}
+      {% for catData in categories %}
+        <p>
+          <a href="{{ "/" | htmlBaseUrl }}categories/{{ catData.category | slugify }}">{{ catData.category }}</a>
+          ({{ catData.count }} posts)
+          {% if catData.description %}
+            <br/>
+            {{ catData.description }}
+          {% endif %}
+        </p>
+      {% endfor %}   
     {% else %}
     <p>No category data to display</p>
     {% endif %}
