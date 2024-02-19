@@ -10,7 +10,7 @@
     "start": "npm-run-all --sequential clean watch:eleventy",
     "build": "npm-run-all --sequential clean build:eleventy"
   },
-  "keywords": [],
+  "keywords": ["Cosplayer", "Workshop"],
   "author": "John M. Wargo",
   "license": "MIT",
   "dependencies": {

@@ -8,26 +8,34 @@ layout: default
 
 <section id="banner">
   <div class="content">
-    <header>
-      <h1>{{ title }}</h1>
-      <p>View all posts for a particular category by clicking on one of the categories listed below. There are {{ categories.length }} categories on the site today.</p>
-    </header>
+    <h2>{{ title }}</h2>
+    <p>View all posts for a particular category by clicking on one of the categories listed below. There are {{
+      categories.length }} categories on the site today.</p>
 
     {% if categories.length > 0 %}
-      <table>
-        {% tablerow catData in categories cols:2 %}
-           <h4>
-              <a href="{{ "/" | htmlBaseUrl }}categories/{{ catData.category | slugify }}/">{{ catData.category }}</a>
-            </h4>
-            Count: {{ catData.count }}
-            {% if catData.description.length > 0 %}
-              |
-              {{ catData.description }}
-            {% endif %}
-        {% endtablerow %}
-      </table>  
+    <p>
+      <a href="{{ " /" | htmlBaseUrl }}categories/{{ catData.category | slugify }}">{{ catData.category }}</a>
+      ({{ catData.count }} posts)
+      {% if catData.description %}
+      <br />
+      {{ catData.description }}
+      {% endif %}
+    </p>
+
+    {% comment %} <table>
+      {% tablerow catData in categories cols:2 %}
+      <h4>
+        <a href="{{ " /" | htmlBaseUrl }}categories/{{ catData.category | slugify }}/">{{ catData.category }}</a>
+      </h4>
+      Count: {{ catData.count }}
+      {% if catData.description.length > 0 %}
+      |
+      {{ catData.description }}
+      {% endif %}
+      {% endtablerow %}
+    </table> {% endcomment %}
     {% else %}
-        <p>No category data to display</p>
-    {% endif %} 
+    <p>No category data to display</p>
+    {% endif %}
   </div>
 </section>

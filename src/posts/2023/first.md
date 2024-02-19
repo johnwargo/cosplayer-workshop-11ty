@@ -6,7 +6,7 @@ categories:
 tags: post
 ---
 
-This is my daughter Lizzy and me, from way back in 2005. She liked me a lot more back then because I didn’t hound her to do the dishes or pick up her clothes. Aaah, those were different days back then. 
+This is my daughter Lizzy and me, from way back in 2005. She liked me a lot more back then because I didn’t hound her to do the dishes or pick up her clothes. Aah, those were different days back then. 
 
 ![Me and Lizzy in the Leaves](/images/2023/leaves.jpg)
 
