@@ -40,23 +40,16 @@ License: pixelarity.com/license
           </header>
           <ul>
             <li>
-              <a href="{{ " /" | htmlBaseUrl }}">Home</a>
+              <a href="{{ "/" | htmlBaseUrl }}">Home</a>
             </li>
             <li>
-              <span class="opener">Categories</span>
-              <ul>
-                {% for category in categories %}
-                <li>
-                  <a href="{{ " /" | htmlBaseUrl }}category/{{ category | slugify }}">{{ category | capitalize }}</a>
-                </li>
-                {% endfor %}
-              </ul>
-            </li>
+              <a href="{{ "/" | htmlBaseUrl }}">Categories</a>
+            </li>           
             <li>
-              <a href="{{ " /" | htmlBaseUrl }}about">About</a>
+              <a href="{{ "/" | htmlBaseUrl }}about">About</a>
             </li>
           </ul>
-        </nav>
+        </nav> 
 
         <section>
           <header class="major">
@@ -100,11 +93,11 @@ License: pixelarity.com/license
     </div>
   </div>
 
-  <script src="{{ " /" | htmlBaseUrl }}assets/js/jquery.min.js"></script>
-  <script src="{{ " /" | htmlBaseUrl }}assets/js/browser.min.js"></script>
-  <script src="{{ " /" | htmlBaseUrl }}assets/js/breakpoints.min.js"></script>
-  <script src="{{ " /" | htmlBaseUrl }}assets/js/util.js"></script>
-  <script src="{{ " /" | htmlBaseUrl }}assets/js/main.js"></script>
+  <script src="{{ "/" | htmlBaseUrl }}assets/js/jquery.min.js"></script>
+  <script src="{{ "/" | htmlBaseUrl }}assets/js/browser.min.js"></script>
+  <script src="{{ "/" | htmlBaseUrl }}assets/js/breakpoints.min.js"></script>
+  <script src="{{ "/" | htmlBaseUrl }}assets/js/util.js"></script>
+  <script src="{{ "/" | htmlBaseUrl }}assets/js/main.js"></script>
 
 </body>
 
