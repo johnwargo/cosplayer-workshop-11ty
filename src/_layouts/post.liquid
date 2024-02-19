@@ -1,7 +1,12 @@
 ---
 layout: default
 ---
+
+{% assign previousPost = collections.post | getPreviousCollectionItem %}
+{% assign nextPost = collections.post | getNextCollectionItem %}
+
 <h1>{{ title }}</h1>
+{% include 'pretty-print.html' %}
 <p>
   <strong>Posted:
   </strong>
@@ -15,3 +20,15 @@ layout: default
 </p>
 
 {{ content }}
+
+<hr />
+{% if nextPost %}
+  <p>Next Post:
+    <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>
+  </p>
+{% endif %}
+{% if previousPost %}
+  <p>Previous Post:
+    <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>
+  </p>
+{% endif %}
