@@ -8,7 +8,7 @@
     "before": function(paginationData, fullData){ let data = paginationData.filter((item) => item.data.categories.includes('Tools')); return Array.from(data).sort((a, b) => { return a.date < b.date ? 1 : -1; });}
   },
   "category": "Tools",
-  "description": null,
+  "description": "Anything related to tools",
   "eleventyComputed": {
     "title": "Category: {{ category }}"
   },

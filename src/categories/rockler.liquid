@@ -8,7 +8,7 @@
     "before": function(paginationData, fullData){ let data = paginationData.filter((item) => item.data.categories.includes('Rockler')); return Array.from(data).sort((a, b) => { return a.date < b.date ? 1 : -1; });}
   },
   "category": "Rockler",
-  "description": null,
+  "description": "Articles about Rockler products or cool stuff of theirs I own.",
   "eleventyComputed": {
     "title": "Category: {{ category }}"
   },
