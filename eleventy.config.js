@@ -1,4 +1,5 @@
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const generateCategoryPages = require('eleventy-generate-category-pages');
 const pluginDate = require('eleventy-plugin-date');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 // https://github.com/11ty/eleventy/issues/2301
@@ -27,6 +28,19 @@ module.exports = eleventyConfig => {
 		.disable("code");
 
 	eleventyConfig.setLibrary("md", markdownLib);
+
+	var firstRun = true;
+	eleventyConfig.on('eleventy.before', async ({ dir, runMode, outputMode }) => {
+		if (firstRun) {
+			firstRun = false;
+			generateCategoryPages({
+				dataFileName: 'categoryData.json',
+				imageProperties: false,
+				quitOnError: true,
+				debugMode: false
+			});
+		}
+	});
 
 	// From ray camden's blog, first paragraph as excerpt
 	eleventyConfig.addShortcode('excerpt', post => extractExcerpt(post));

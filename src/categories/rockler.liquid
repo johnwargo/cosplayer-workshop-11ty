@@ -1,0 +1,50 @@
+---js
+{
+  "layout": "default",
+  "pagination": {
+    "data": "collections.post",
+    "size": 20,
+    "alias": "catposts",
+    "before": function(paginationData, fullData){ let data = paginationData.filter((item) => item.data.categories.includes('Rockler')); return Array.from(data).sort((a, b) => { return a.date < b.date ? 1 : -1; });}
+  },
+  "category": "Rockler",
+  "description": null,
+  "eleventyComputed": {
+    "title": "Category: {{ category }}"
+  },
+  "permalink": "categories/{{ category | slugify }}/{% if pagination.pageNumber != 0 %}page-{{ pagination.pageNumber }}/{% endif %}"
+}
+---
+
+{% include 'pagination-count.html' %}
+
+{{ description }}
+
+<p>This page lists all posts in the category, in reverse chronological order.</p>
+
+<ul class="posts">
+  {% for post in catposts %}
+    <li>
+      <h4>
+        <a href="{{post.url}}" style="cursor: pointer">{{ post.data.title }}</a>
+      </h4>
+      Posted {{ post.date | readableDate }}
+      {% if post.data.categories.length > 0 %}
+        in
+        {% for cat in post.data.categories %}
+          <a href="/categories/{{ cat | slugify }}">{{ cat }}</a>
+          {%- unless forloop.last %},
+          {% endunless %}
+        {% endfor %}
+      {% endif %}
+      <br/>
+      {% if post.data.description %}
+        {{ post.data.description }}
+      {% else %}
+        {% excerpt post %}
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
+{% include 'pagination-nav.html' %}

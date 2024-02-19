@@ -1,0 +1,3 @@
+{% if pagination.pages.length > 1 %}
+  <p>Page {{ pagination.pageNumber | plus: 1 }} of {{ pagination.pages.length }}</p>
+{% endif %}
