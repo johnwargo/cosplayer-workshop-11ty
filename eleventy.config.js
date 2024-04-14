@@ -2,12 +2,12 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const generateCategoryPages = require('eleventy-generate-category-pages');
 const pluginDate = require('eleventy-plugin-date');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-// https://github.com/11ty/eleventy/issues/2301
 const markdownIt = require('markdown-it');
 const markdownItAttrs = require('markdown-it-attrs');
-// Transforms
-// https://learneleventyfromscratch.com/lesson/31.html#minifying-html-output
 const htmlMinTransform = require('./src/transforms/html-min.js');
+
+// local plugin(s)
+const pluginImages = require("./eleventy.config.images.js");
 
 // Create a helpful production flag
 const isProduction = process.env.node_env === 'production';
@@ -16,6 +16,7 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginDate);
 	eleventyConfig.addPlugin(pluginRss);
+	eleventyConfig.addPlugin(pluginImages, { debugMode: false });
 
 	// https://github.com/11ty/eleventy/issues/2301
 	const mdOptions = {
@@ -79,12 +80,12 @@ module.exports = eleventyConfig => {
 		return today.getFullYear();
 	}
 
-	eleventyConfig.addPassthroughCopy("src/_data/*");
-	eleventyConfig.addPassthroughCopy("src/assets/css/*");
-	eleventyConfig.addPassthroughCopy("src/assets/js/*");
-	eleventyConfig.addPassthroughCopy("src/assets/sass/*");
-	eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
-	eleventyConfig.addPassthroughCopy("src/images/*");
+	// eleventyConfig.addPassthroughCopy("src/_data/*");
+	// eleventyConfig.addPassthroughCopy("src/assets/css/*");
+	// eleventyConfig.addPassthroughCopy("src/assets/js/*");
+	// eleventyConfig.addPassthroughCopy("src/assets/sass/*");
+	// eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
+	// eleventyConfig.addPassthroughCopy("src/images/*");
 
 	[
 		"src/_data/*",
