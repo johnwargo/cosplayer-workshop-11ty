@@ -1,13 +1,13 @@
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const { EleventyHtmlBasePlugin } = require('@11ty/eleventy');
 const generateCategoryPages = require('eleventy-generate-category-pages');
 const pluginDate = require('eleventy-plugin-date');
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginRss = require('@11ty/eleventy-plugin-rss');
 const markdownIt = require('markdown-it');
 const markdownItAttrs = require('markdown-it-attrs');
 const htmlMinTransform = require('./src/transforms/html-min.js');
 
 // local plugin(s)
-const pluginImages = require("./eleventy.config.images.js");
+const pluginImages = require('./eleventy.config.images.js');
 
 // Create a helpful production flag
 const isProduction = process.env.node_env === 'production';
@@ -26,9 +26,9 @@ module.exports = eleventyConfig => {
 	};
 	const markdownLib = markdownIt(mdOptions)
 		.use(markdownItAttrs)
-		.disable("code");
+		.disable('code');
 
-	eleventyConfig.setLibrary("md", markdownLib);
+	eleventyConfig.setLibrary('md', markdownLib);
 
 	var firstRun = true;
 	eleventyConfig.on('eleventy.before', async ({ dir, runMode, outputMode }) => {
@@ -54,7 +54,7 @@ module.exports = eleventyConfig => {
 		return post.templateContent;
 	}
 
-	eleventyConfig.addCollection("categories", function (collectionApi) {
+	eleventyConfig.addCollection('categories', function (collectionApi) {
 		let categories = new Set();
 		let posts = collectionApi.getFilteredByTag('post');
 		posts.forEach(p => {
@@ -64,7 +64,7 @@ module.exports = eleventyConfig => {
 		return Array.from(categories);
 	});
 
-	eleventyConfig.addFilter("filterByCategory", function (posts, cat) {
+	eleventyConfig.addFilter('filterByCategory', function (posts, cat) {
 		// case matters, so let's lowercase the desired category, cat	and we will 
 		// lowercase our posts categories as well
 		cat = cat.toLowerCase();
@@ -80,21 +80,14 @@ module.exports = eleventyConfig => {
 		return today.getFullYear();
 	}
 
-	// eleventyConfig.addPassthroughCopy("src/_data/*");
-	// eleventyConfig.addPassthroughCopy("src/assets/css/*");
-	// eleventyConfig.addPassthroughCopy("src/assets/js/*");
-	// eleventyConfig.addPassthroughCopy("src/assets/sass/*");
-	// eleventyConfig.addPassthroughCopy("src/assets/webfonts/*");
-	// eleventyConfig.addPassthroughCopy("src/images/*");
-
 	[
-		"src/_data/*",
-		"src/assets/css/",
-		"src/assets/js/",
-		"src/assets/sass/",
-		"src/assets/webfonts/",
-		"src/files/*",
-		"src/images/*"
+		'src/_data/*',
+		'src/assets/css/',
+		'src/assets/js/',
+		'src/assets/sass/',
+		'src/assets/webfonts/',
+		'src/files/*',
+		'src/images/*'
 	].forEach((path) => {
 		eleventyConfig.addPassthroughCopy(path);
 	});
@@ -112,10 +105,10 @@ module.exports = eleventyConfig => {
 	return {
 		dir: {
 			input: 'src',
-			output: "_site",
-			includes: "_includes",
-			layouts: "_layouts",
-			data: "_data"
+			output: '_site',
+			includes: '_includes',
+			layouts: '_layouts',
+			data: '_data'
 		}
 	}
 };

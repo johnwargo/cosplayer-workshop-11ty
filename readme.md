@@ -11,11 +11,8 @@ My daughter uses my workshop to build her costumes and props, and there are a lo
 
 ## Tasks
 
-* [ ] Finish implementation of Categories plugin
-* [ ] Add buy me a Coffee
-* [ ] Add Google Analytics
-* [ ] Add Search
-
-This site is a work in progress, but should be fun putting together.
+- [ ] 
+- [ ] Add buy me a Coffee
+- [ ] Add Search
 
 ![Home Page](images/image-01.png)

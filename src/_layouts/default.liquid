@@ -13,14 +13,15 @@ License: pixelarity.com/license
 <html>
 
 <head>
+  <title>{{ siteTitle }}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>{{ siteTitle }}</title>
+  <meta name="generator" content="Eleventy 3" />
   <link rel="stylesheet" href="{{ " /" | htmlBaseUrl }}assets/css/main.css" />
-  <link rel="stylesheet" href="{{ "/" | htmlBaseUrl }}assets/css/scott.css" />
+  <link rel="stylesheet" href="{{ " /" | htmlBaseUrl }}assets/css/scott.css" />
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XN1RY9MXR4"></script>
-{% include 'google-analytics.html' %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XN1RY9MXR4"></script>
+  {% include 'google-analytics.html' %}
 </head>
 
 <body class="is-preload">
@@ -44,16 +45,16 @@ License: pixelarity.com/license
           </header>
           <ul>
             <li>
-              <a href="{{ "/" | htmlBaseUrl }}">Home</a>
+              <a href="{{ " /" | htmlBaseUrl }}">Home</a>
             </li>
             <li>
-              <a href="{{ "/" | htmlBaseUrl }}categories/">Categories</a>
-            </li>           
+              <a href="{{ " /" | htmlBaseUrl }}categories/">Categories</a>
+            </li>
             <li>
-              <a href="{{ "/" | htmlBaseUrl }}about/">About</a>
+              <a href="{{ " /" | htmlBaseUrl }}about/">About</a>
             </li>
           </ul>
-        </nav> 
+        </nav>
 
         <section>
           <header class="major">
@@ -97,11 +98,11 @@ License: pixelarity.com/license
     </div>
   </div>
 
-  <script src="{{ "/" | htmlBaseUrl }}assets/js/jquery.min.js"></script>
-  <script src="{{ "/" | htmlBaseUrl }}assets/js/browser.min.js"></script>
-  <script src="{{ "/" | htmlBaseUrl }}assets/js/breakpoints.min.js"></script>
-  <script src="{{ "/" | htmlBaseUrl }}assets/js/util.js"></script>
-  <script src="{{ "/" | htmlBaseUrl }}assets/js/main.js"></script>
+  <script src="{{ " /" | htmlBaseUrl }}assets/js/jquery.min.js"></script>
+  <script src="{{ " /" | htmlBaseUrl }}assets/js/browser.min.js"></script>
+  <script src="{{ " /" | htmlBaseUrl }}assets/js/breakpoints.min.js"></script>
+  <script src="{{ " /" | htmlBaseUrl }}assets/js/util.js"></script>
+  <script src="{{ " /" | htmlBaseUrl }}assets/js/main.js"></script>
 
 </body>
 
