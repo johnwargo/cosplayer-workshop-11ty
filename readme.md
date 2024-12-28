@@ -11,7 +11,7 @@ My daughter uses my workshop to build her costumes and props, and there are a lo
 
 ## Tasks
 
-- [ ] 
+- [ ] Migrate to Eleventy 3 Image processing
 - [ ] Add buy me a Coffee
 - [ ] Add Search
 
