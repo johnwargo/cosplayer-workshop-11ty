@@ -11,6 +11,7 @@ My daughter uses my workshop to build her costumes and props, and there are a lo
 
 ## Tasks
 
+- [ ] Add generator version to the site
 - [ ] Migrate to Eleventy 3 Image processing
 - [ ] Add buy me a Coffee
 - [ ] Add Search
