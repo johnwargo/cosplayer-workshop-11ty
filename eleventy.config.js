@@ -64,6 +64,10 @@ module.exports = eleventyConfig => {
 		return Array.from(categories);
 	});
 
+	eleventyConfig.addShortcode('generatorVersion', function () {
+		
+	});
+
 	eleventyConfig.addFilter('filterByCategory', function (posts, cat) {
 		// case matters, so let's lowercase the desired category, cat	and we will 
 		// lowercase our posts categories as well
@@ -74,11 +78,6 @@ module.exports = eleventyConfig => {
 		});
 		return result;
 	});
-
-	function currentYear() {
-		const today = new Date();
-		return today.getFullYear();
-	}
 
 	[
 		'src/_data/*',

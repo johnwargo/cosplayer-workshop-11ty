@@ -16,11 +16,9 @@ License: pixelarity.com/license
   <title>{{ siteTitle }}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta name="generator" content="Eleventy 3" />
-  <link rel="stylesheet" href="{{ " /" | htmlBaseUrl }}assets/css/main.css" />
-  <link rel="stylesheet" href="{{ " /" | htmlBaseUrl }}assets/css/scott.css" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XN1RY9MXR4"></script>
+  <meta name="generator" content="{{ eleventyinfo.generatorStr }}" />
+  <link rel="stylesheet" href="{{ "/" | htmlBaseUrl }}assets/css/main.css" />
+  <link rel="stylesheet" href="{{ "/" | htmlBaseUrl }}assets/css/scott.css" />
   {% include 'google-analytics.html' %}
 </head>
 
