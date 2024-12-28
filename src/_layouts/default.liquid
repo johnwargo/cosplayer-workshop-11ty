@@ -27,7 +27,7 @@ License: pixelarity.com/license
     <div id="main">
       <div class="inner">
         <header id="header">
-          <a href="{{ " /" | htmlBaseUrl }}index.html" class="logo">The Cosplayer's Workshop</a>
+          <a href="{{ "/" | htmlBaseUrl }}index.html" class="logo">The Cosplayer's Workshop</a>
         </header>
 
         {{ content }}
@@ -43,13 +43,13 @@ License: pixelarity.com/license
           </header>
           <ul>
             <li>
-              <a href="{{ " /" | htmlBaseUrl }}">Home</a>
+              <a href="{{ "/" | htmlBaseUrl }}">Home</a>
             </li>
             <li>
-              <a href="{{ " /" | htmlBaseUrl }}categories/">Categories</a>
+              <a href="{{ "/" | htmlBaseUrl }}categories/">Categories</a>
             </li>
             <li>
-              <a href="{{ " /" | htmlBaseUrl }}about/">About</a>
+              <a href="{{ "/" | htmlBaseUrl }}about/">About</a>
             </li>
           </ul>
         </nav>
@@ -90,17 +90,19 @@ License: pixelarity.com/license
         <footer id="footer">
           <p class="copyright">&copy;
             <a href="https://about.me/johnwargo" target="_blank">John M. Wargo</a>, All Rights Reserved
+            <br /><br />
+            Built on <a href="https://www.11ty.dev/" target="_blank" >{{ eleventyinfo.generatorStr}}</a>
           </p>
         </footer>
       </div>
     </div>
   </div>
 
-  <script src="{{ " /" | htmlBaseUrl }}assets/js/jquery.min.js"></script>
-  <script src="{{ " /" | htmlBaseUrl }}assets/js/browser.min.js"></script>
-  <script src="{{ " /" | htmlBaseUrl }}assets/js/breakpoints.min.js"></script>
-  <script src="{{ " /" | htmlBaseUrl }}assets/js/util.js"></script>
-  <script src="{{ " /" | htmlBaseUrl }}assets/js/main.js"></script>
+  <script src="{{ "/" | htmlBaseUrl }}assets/js/jquery.min.js"></script>
+  <script src="{{ "/" | htmlBaseUrl }}assets/js/browser.min.js"></script>
+  <script src="{{ "/" | htmlBaseUrl }}assets/js/breakpoints.min.js"></script>
+  <script src="{{ "/" | htmlBaseUrl }}assets/js/util.js"></script>
+  <script src="{{ "/" | htmlBaseUrl }}assets/js/main.js"></script>
 
 </body>
 
