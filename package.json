@@ -1,8 +1,8 @@
 {
   "name": "cosplayerworkshop",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "A simple Eleventy site for mu daughter's Cosplayer Workshop",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
     "clean": "rimraf _site",
     "build:eleventy": "eleventy",

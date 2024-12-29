@@ -1,18 +1,18 @@
-const { EleventyHtmlBasePlugin } = require('@11ty/eleventy');
-const generateCategoryPages = require('eleventy-generate-category-pages');
-const pluginDate = require('eleventy-plugin-date');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
-const markdownIt = require('markdown-it');
-const markdownItAttrs = require('markdown-it-attrs');
-const htmlMinTransform = require('./src/transforms/html-min.js');
+import { EleventyHtmlBasePlugin } from '@11ty/eleventy';
+import generateCategoryPages from 'eleventy-generate-category-pages';
+import pluginDate from 'eleventy-plugin-date';
+import pluginRss from '@11ty/eleventy-plugin-rss';
+import markdownIt from 'markdown-it';
+import markdownItAttrs from 'markdown-it-attrs';
+import htmlMinTransform from './src/transforms/html-min.js';
 
 // local plugin(s)
-const pluginImages = require('./eleventy.config.images.js');
+import pluginImages from './eleventy.config.images.js';
 
 // Create a helpful production flag
 const isProduction = process.env.node_env === 'production';
 
-module.exports = eleventyConfig => {
+export default function (eleventyConfig) {
 	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 	eleventyConfig.addPlugin(pluginDate);
 	eleventyConfig.addPlugin(pluginRss);

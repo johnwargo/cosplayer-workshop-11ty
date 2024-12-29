@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	title: "Cosplayer's Workshop",
 	url: "https://cosplayerworkshop.com",
 	language: "en",
