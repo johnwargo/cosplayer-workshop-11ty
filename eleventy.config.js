@@ -19,11 +19,7 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPlugin(pluginImages, { debugMode: false });
 
 	// https://github.com/11ty/eleventy/issues/2301
-	const mdOptions = {
-		html: true,
-		breaks: true,
-		linkify: true,
-	};
+	const mdOptions = { html: true, breaks: true, linkify: true };
 	const markdownLib = markdownIt(mdOptions)
 		.use(markdownItAttrs)
 		.disable('code');
@@ -62,10 +58,6 @@ module.exports = eleventyConfig => {
 			cats.forEach(c => categories.add(c));
 		});
 		return Array.from(categories);
-	});
-
-	eleventyConfig.addShortcode('generatorVersion', function () {
-		
 	});
 
 	eleventyConfig.addFilter('filterByCategory', function (posts, cat) {
