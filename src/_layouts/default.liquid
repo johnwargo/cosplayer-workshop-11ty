@@ -16,7 +16,7 @@ License: pixelarity.com/license
   <title>{{ siteTitle }}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta name="generator" content="{{ eleventyinfo.generatorStr }}" />
+  <meta name="generator" content="{{ eleventy.generator }}">
   <link rel="stylesheet" href="{{ "/" | htmlBaseUrl }}assets/css/main.css" />
   <link rel="stylesheet" href="{{ "/" | htmlBaseUrl }}assets/css/scott.css" />
   {% include 'google-analytics.html' %}
@@ -29,9 +29,7 @@ License: pixelarity.com/license
         <header id="header">
           <a href="{{ "/" | htmlBaseUrl }}index.html" class="logo">The Cosplayer's Workshop</a>
         </header>
-
         {{ content }}
-
       </div>
     </div>
 
@@ -91,7 +89,7 @@ License: pixelarity.com/license
           <p class="copyright">&copy;
             <a href="https://about.me/johnwargo" target="_blank">John M. Wargo</a>, All Rights Reserved
             <br /><br />
-            Built on <a href="https://www.11ty.dev/" target="_blank" >{{ eleventyinfo.generatorStr}}</a>
+            Built on <a href="https://www.11ty.dev/" target="_blank" >{{ eleventy.generator }}</a>
           </p>
         </footer>
       </div>
